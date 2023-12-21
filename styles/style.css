@@ -4,8 +4,69 @@
   box-sizing: border-box;
 }
 
+.py-one {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
 .container {
   max-width: 1110px;
   margin-left: auto;
   margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+img {
+  width: 100%;
+}
+
+.landing-img {
+  width: 100vw;
+}
+
+#landing {
+  background-image: url("../img/back_img.avif");
+}
+
+.tab {
+  display: inline-block;
+  min-width: 100px;
+  border: 1px solid;
+  padding: 1rem 1rem;
+  border-radius: 5%;
+}
+
+.tab + .tab {
+  margin-left: 1rem;
+}
+
+table {
+  border: 2px solid;
+}
+
+td {
+  border: 1px solid;
+  padding: 5px;
+}
+
+.red-bg {
+  background-color: red;
+}
+
+.aqua-bg {
+  background-color: aqua;
+}
+
+.first-letter {
+  color: brown;
+}
+
+.fixed-size-div {
+  width: 300px;
+  height: 300px;
+}
+
+.hidden {
+  display: none !important;
 }
