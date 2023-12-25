@@ -3,8 +3,193 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Document</title>
+    <link rel="stylesheet" href="./styles/style.css" />
+    <title>Робота з формами</title>
   </head>
-  <body></body>
+  <body>
+    <!-- <a href="http://google.com" target="_blank">my projects</a>
+    <a href="tel:+38094-894-44-34">My contact</a>
+    <a href="mailto:v@gmail.com">Send me a message</a> -->
+
+    <!-- Типи полів форми -->
+    <!-- <div class="container">
+      <form
+        action="https://echo.free.beeceptor.com"
+        method="POST"
+        id="testform"
+      >
+        <input
+          type="text"
+          id="username"
+          name="username_ID"
+          placeholder="Enter your nickname"
+        />
+        <br />
+        <input
+          type="password"
+          name="pwd"
+          id="pwd1"
+          minlength="5"
+          placeholder="Enter your password"
+        />
+        <br />
+        <input
+          type="email"
+          name="User_email"
+          id="email"
+          placeholder="email here"
+        />
+        <br />
+        <input type="color" name="color" id="color" />
+        <br />
+        <input type="radio" name="group1" value="Men" /> Men
+        <br />
+        <input type="radio" name="group1" value="Women" /> Women
+        <br />
+        <h4>What pets do you have?</h4>
+        <input type="checkbox" name="chk1" id="chk1" value="cat" /> Cat
+        <input type="checkbox" name="chk2" id="chk2" value="dog" /> Dog
+        <input type="checkbox" name="chk3" id="chk3" value="parrot" /> Parrot
+
+        <br />
+        <input type="hidden" name="discount" value="30% off" />
+
+        10<input
+          type="range"
+          name="range_qnt"
+          id="rng1"
+          min="10"
+          max="50"
+          step="10"
+        />50
+        <br />
+        <input type="number" name="age" id="age" min="0" max="120" />
+
+        <input type="submit" value="Submit" />
+        <button type="submit" form="testform">Submit Form Button</button>
+      </form>
+    </div> -->
+
+    <!-- Групування та іменування полів -->
+    <!-- <div class="container">
+      <form action="https://echo.free.beeceptor.com" method="POST">
+        <div>
+          <label for="username_ID">Username</label>
+          <input type="text" name="username" id="username_ID" required />
+        </div>
+
+        <div>
+          <label
+            >Password
+            <input type="password" name="password" required />
+          </label>
+        </div>
+
+        <input
+          type="image"
+          src="./img/search.png"
+          alt="submit button"
+          width="20"
+        />
+
+        <input type="submit" value="Send" />
+      </form>
+    </div> -->
+
+    <!-- File Upload -->
+    <!-- <div class="container">
+      <form
+        action="https://echo.free.beeceptor.com"
+        method="POST"
+        id="file_upload"
+      >
+        <input
+          type="file"
+          name="upload"
+          id="file_upl"
+          accept="image/*"
+          multiple
+        />
+      </form>
+      <button type="submit" form="file_upload">Upload on Server</button>
+    </div> -->
+
+    <!-- DATALIST опції вводу -->
+    <!-- <div class="container">
+      <form
+        action="https://echo.free.beeceptor.com"
+        method="POST"
+        id="specific_"
+      >
+        <input type="text" name="city" id="city" list="cities_list" />
+        <input
+          type="color"
+          name="color"
+          id="fav_color"
+          list="selected_colors"
+          value="#ff0000"
+        />
+        <datalist id="selected_colors">
+          <option value="#ff0000">RED</option>
+          <option value="#ffdddd">RED2</option>
+          <option value="#ff8888">RED3</option>
+        </datalist>
+
+        <datalist id="cities_list">
+          <option value="Kharkiv">Kharkiv</option>
+          <option value="Kyiv">Kyiv</option>
+          <option value="Odesa">Odesa</option>
+        </datalist>
+        <button type="submit">Send</button>
+      </form>
+    </div> -->
+
+    <!-- Text Area -->
+    <!-- <form action="https://echo.free.beeceptor.com" method="GET" id="area_">
+      <textarea
+        name="comment"
+        id="comment"
+        cols="30"
+        rows="10"
+        maxlength="600"
+        style="resize: none"
+      ></textarea>
+    </form> -->
+
+    <!--  Option Grouping -->
+    <!-- <form action="https://echo.free.beeceptor.com" method="GET" id="area_">
+      <fieldset>
+        <legend>Ми вивчаємо такі технології, обирайте:</legend>
+        <br />
+        <input type="radio" name="tech" id="html" /> HTML
+        <br />
+        <input type="radio" name="tech" id="js" /> JS
+        <br />
+        <input type="radio" name="tech" id="ajax" /> AJAX
+      </fieldset>
+    </form> -->
+
+    <!-- Select input -->
+    <div class="container">
+      <form action="https://echo.free.beeceptor.com" method="GET" id="select_">
+        <label for="city">Your city:</label>
+        <select name="city" id="city">
+          <option value="-" disabled>Виберіть місто</option>
+          <option value="Dnipro">Дніпро</option>
+          <option value="Zhutomyr">Житомир</option>
+          <option value="Dnipro2">Дніпро</option>
+          <option value="Dnipro3">Дніпро</option>
+          <option value="Dnipro4">Дніпро</option>
+        </select>
+        <input
+          type="text"
+          name="name"
+          id="name"
+          autocomplete="name"
+          autofocus
+        />
+        <button type="submit">Send</button>
+      </form>
+    </div>
+  </body>
 </html>
