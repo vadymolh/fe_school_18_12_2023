@@ -1,0 +1,57 @@
+:root {
+  font-size: 16px;
+  line-height: 1.6em;
+  margin: 0;
+}
+
+body {
+  color: #555;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+}
+
+#main-header {
+  background-color: rgb(80, 235, 230);
+  min-height: 6svh;
+}
+
+#navbar {
+  background-color: #333;
+  color: #fff;
+}
+
+#navbar ul {
+  list-style: none;
+  padding: 0;
+}
+#navbar li {
+  display: inline;
+}
+
+#navbar a {
+  text-decoration: none;
+  font-size: 1.1rem;
+  padding-right: 15px;
+  min-height: 10svh;
+}
+
+#showcase {
+  background-image: url("../img/showcase.avif");
+  background-position: center right;
+  min-height: 84svh;
+  text-align: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#title1 {
+  color: white;
+}

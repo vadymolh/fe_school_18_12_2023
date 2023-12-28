@@ -1,0 +1,31 @@
+h1 {
+  text-shadow: 0px 0px 5px yellow, 0px -5px 5px orangered;
+}
+
+h1:hover {
+  box-shadow: 5px 5px 4px grey;
+}
+
+p {
+  border-style: outset;
+  border-width: 5px;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.blue {
+  color: aqua;
+}
+/* BACKGROUND */
+
+p {
+  background: linear-gradient(to left, skyblue, white);
+}
+
+body {
+  background-image: url("../img/_tree.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
