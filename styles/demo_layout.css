@@ -3,7 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   color: #fff;
-  font-size: 40px;
+
   text-align: center;
 }
 
@@ -46,7 +46,7 @@ main {
   flex: 1;
 }
 .main-section {
-  flex: 4;
+  flex: 2;
   flex-basis: 600px;
 }
 
@@ -93,6 +93,7 @@ form {
   background-color: #245538;
   list-style-type: none;
   padding: 10px;
+  font-size: 18px;
 }
 
 .form-row {
