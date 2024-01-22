@@ -7,6 +7,12 @@
 
 body {
   background-color: $primary;
+  @include sm {
+    background-color: aqua;
+  }
+  @include my_brake_point(1100px) {
+    background-color: bisque;
+  }
 }
 
 .container {
@@ -15,6 +21,10 @@ body {
   margin: 0 auto;
   padding: $base-padding * 5 $base-padding * 3;
   box-sizing: border-box;
+  @include sm {
+    width: 100%;
+    padding: 0;
+  }
 }
 
 .test {
