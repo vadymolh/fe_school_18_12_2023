@@ -8,33 +8,19 @@
   </head>
   <body>
     <header>
-      <h1>DOM Selectors</h1>
+      <h1>Event Bubling</h1>
     </header>
-    <section class="container">
-      <form action="/index.html" id="my-form" method="get">
-        <h2>Add new User</h2>
-        <div class="msg"></div>
-        <div>
-          <label for="name">Name</label>
-          <input type="text" id="name">
-        </div>
-        <div>
-          <label for="email">Email</label>
-          <input type="email" id="email">
-        </div>
-        <input type="submit" class="btn">
-      </form>
+    <a href="./demoJQuery.html">На демо JQuery</a>
+    <div class="container">
+      <div class="content first">
+        <p class="inner">Lorem ipsum dolor sit amet consectetur adipisicing</p></div>
+      <div class="content">
+        <p class="inner">Lorem ipsum dolor sit amet consectetur adipisicing.</p></div>
+      <div class="content">
+        <p class="inner">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+      </div>
+    </div>
 
-
-      <ul id="users" class="items">
-        <li class="item">Item 1</li>
-        <li class="item">Item 2</li>
-        <li class="item">Item 3</li>
-      </ul>
-    </section>
-   <img src="/" alt="" id = "img">
-    
-    <script src="ls13_DOM.js">
-    </script>
+    <script src="app.js"></script>
   </body>
 </html>
