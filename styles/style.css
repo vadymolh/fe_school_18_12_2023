@@ -2,10 +2,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
+} 
 
 
-.body {
+body {
   font-size: 20px;
   font-family: Arial, Helvetica, sans-serif;
   background-color: bisque;
@@ -27,7 +27,21 @@ header {
   
 }
 
+.box {
+  background-color:  rgb(150,100,40);
+  color: aliceblue;
+  width:400px;
+  height: 100px;
+  padding: 20px;
+  text-align: center  ;
+}
 
+.animated {
+  background: brown;
+  width:100px;
+  height: 100px;
+  position: relative;
+}
 
 
 .blue {

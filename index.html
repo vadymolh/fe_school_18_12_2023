@@ -4,7 +4,20 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles/style.css" />
-    <title>Main</title>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <title>AJAX jQuery</title>
   </head>
-  <body></body>
+  <body>
+
+    
+    <div class="container">
+      <form action="https://jsonplaceholder.typicode.com/posts" id="postForm">
+        <input type="text" id="title" placeholder="Title here"> <br>
+        <textarea name="body" id="body" cols="20" rows="3"></textarea>
+        <input type="submit" value="Submit">
+      </form>
+      <div class="result"></div>
+    </div>
+    <script src="js/ajax_app.js"></script>
+  </body>
 </html>
