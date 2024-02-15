@@ -3,8 +3,44 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./styles/style.css" />
-    <title>Main</title>
+    
+    <title>Travel memories</title>
+    <link rel="stylesheet" href="./styles/bootstrap.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin=""></script>
   </head>
-  <body></body>
+  <body>
+    <div class="container mt-4">
+      <h1 class="text-center">My travel list!</h1>
+      <form action="/" id="search-country" class="my-5">
+        <div class="form-group">
+          <label for="country-name">Назва країни</label>
+          <input type="text" id="country-name">
+        </div>
+        <input type="submit" class="form-control my-3"  value="Додати до відвіданих">
+
+      </form>
+
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Flag</th>
+            <th>Name</th>
+            <th>Capital</th>
+            <th>Area sq.km</th>
+          </tr>
+        </thead>
+        <tbody id="country-list"></tbody>
+      </table>
+
+      <div id="map"></div>
+    </div>
+    <script src="app.js"></script>
+  </body>
 </html>
