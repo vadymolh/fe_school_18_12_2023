@@ -1,5 +1,17 @@
 // Створення простої Куки
 
+let form_btn = document.querySelector('#submit');
+let form = document.querySelector('#form');
+
+form.addEventListener('submit', (e) =>{
+    e.preventDefault();
+    let name = document.querySelector('#name').value;
+    let days = Number(document.querySelector('#expire').value);
+
+    console.log(name, days);
+    document.cookie = `name=${name};max-age=${60*60*24*days}`
+});
+
 
 document.cookie = "name=Rob;";
 document.cookie = "id=6;";
