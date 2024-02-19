@@ -5,7 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles/style.css" />
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
-    <title>Main</title>
+    <title>Weather APP</title>
   </head>
-  <body></body>
+  <body>
+    <div class="container">
+      <div class="sec"> 
+        <input type="text" placeholder="Введіть своє місто латинкою" class = "enter" id="city-name" required>
+        <button class="submit" type="button"> Submit</button>
+      </div>
+
+      <div class="box-1">
+        <div class="card-title">
+          <h2 class="title" id="name"></h2>
+        </div>
+
+        <div class="temp">
+          <img src="" alt="" id="weather-icon">
+          <h2 id="temp"></h2> 
+        </div>
+        <div class="temp-1">
+          <h3 id="feel"></h3>
+        </div>
+
+      </div>
+    </div>
+    <!-- <script src="app.js"></script> -->
+    <script src="sync_async.js"></script>
+  </body>
 </html>
