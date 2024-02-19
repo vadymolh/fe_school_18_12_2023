@@ -79,6 +79,7 @@ class Store {
             url: `https://restcountries.com/v3.1/name/${name}`,
             dataType: "json"
         }).done(function(data){
+            console.log(data);
             let country = new Country(data);
             let arr = Store.readCountries();
             arr.push(country);
