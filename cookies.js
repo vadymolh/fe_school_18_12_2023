@@ -32,7 +32,7 @@ for (let i=0; i<cookies.length; i++){
 
 // Встановлення Expires куки
 let expDate = new Date();
-expDate.setHours(expDate.getHours()+3);
+expDate.setHours(expDate.getHours()+3*24);
 
 document.cookie = "username=NewDATA;Expires=" + expDate.toUTCString();
 
