@@ -1,79 +1,47 @@
-const getData = (url) => {
+const API_KEY = "YOUR_API_KEY"; // ставимо свій API_KEY
+const BASE_URL = `http://www.omdbapi.com/?apikey=${API_KEY}`;
 
-    return new Promise((resolve, reject)=>{
-        const request = new XMLHttpRequest();
-        let data = {};
-
-        request.open("GET", url);  // async
-        request.send();            // async
-
-        request.addEventListener("readystatechange", ()=>{
-            // Запит виконано успішно
-            if (request.readyState === 4 && request.status === 200) {
-                //console.log("DONE", request);
-                data = JSON.parse(request.responseText)
-                resolve(data);
-            } 
-            // Щось пішло не так ...
-            else if (request.readyState === 4) {
-                reject("Error with status code:", request.status);
-            }
-
+$(document).ready(function(){
+    $('.search-form').on("submit", function(e){
+        e.preventDefault();
+        let query_text = $("#search-form-input").val();
+        searchMovies(query_text);
     });
-    });
-    
-    
+});
+
+
+// Функція запиту даних з серверу
+function searchMovies(query_text) {
+    console.log(BASE_URL + "&s=" + query_text);
+    axios.get(BASE_URL + "&s=" + query_text)
+         .then(response => {
+            console.log(response);
+            let movies = response.data.Search;
+            renderMovies(movies);
+        });
 }
 
 
 
-let url = "https://jsonplaceholder.typicode.com/users/1";
-let toDoUrl= "https://jsonplaceholder.typicode.com/todos/1";
+// Функція відображення карток фільмів
+function renderMovies(movies){
+    let output = "";
+    $.each(movies, function(index, movie){
+        output += `<div class="col-lg-3 m-3">
+                        <img src="${movie.Poster}" alt="">
+                        <h4 class="p-2">${movie.Title}</h4>
+                        <a class="btn btn-secondary" onclick="selectMovie('${movie.imdbID}')">Детальніше</a>
+                    </div>`;
+    });
+
+    $("#movies").html(output);
+
+}
 
 
-// Метод .then()
-
-// function doRequest(){
-//     getData(url)
-//         .then((data)=> {
-//             console.log("Success! Promise resolved!");
-//             console.log(data);
-//         },
-//         error=> {
-//             console.log(error);
-//             doRequest();
-//         });
-
-// }
-// doRequest();
-
-
-
-// Метод .catch
-// getData(url)
-//         .then((data)=> {
-//             console.log("Success! Promise resolved!");
-//             console.log(data);
-//         })
-//         .catch(error=> {
-//             console.log(error);
-//         });
-
-
-// Chaining промісів
-getData(url)
-        .then((data)=> {
-            console.log("Success! Promise resolved!");
-            console.log(data);
-            return getData(toDoUrl);
-        })
-        .then(task => {
-            console.log(task);
-            return JSON.stringify(task);
-        })
-        .then( todo_text =>{
-            console.log("Users todo list: ", todo_text)
-        })
-        .catch(err => {
-            console.log(err);
-        });
+// Функція вибору фільма
+function selectMovie(id){
+    sessionStorage.setItem("movieID", id);
+    console.log(window);
+    window.location = "details.html";
+}
