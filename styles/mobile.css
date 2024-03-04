@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .container {
+    width: 80%;
+    margin: auto;
+  }
+  
+
+  .slider {
+    overflow: hidden;
+    border: 2px solid;
+    max-width: 80%;
+    margin: 0 auto;
+  }
+
+.slider-line {
+    display: flex;
+    transition: all ease 1s;
+}
+
+
+.slier-line img {
+    width: 960px;
+    height: auto;
+}
