@@ -10,69 +10,88 @@
   margin-right: auto;
 }
 
-.grid-container {
-  display: grid;
-  border: 2px solid #000;
-  /* grid-template-columns: 1fr 1fr 1fr 0.5fr; */
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 25vh);
-
-  /* Задання розмірів неявно заданих рядків */
-  grid-auto-rows: 15vh 30vh;
-  /* grid-auto-flow: column; */
-
-  column-gap: 20px;
-  row-gap: 5px;
-  /* gap: 20px 25px; */
+.zero-font{
+  /* font-size: 0; */
 }
 
-.header-item {
-  /* grid-column-start: 1;
-  grid-column-end: 3; */
-  grid-column: 1 / -1;
+h1{
+  padding: 0;
+  font-size: 14px;
 }
-.stretched {
-  /* grid-row: 3 / 6; */
-  grid-row: span 4;
+span{
+  padding: 0;
+  font-size: 14px; 
 }
 
-.item {
-  box-sizing: border-box;
-  color: #fff;
-  text-align: center;
+.green {
+  color: green;
+}
+
+.red{
+  color: red;
+}
+
+.my-rem{
+  margin-top: 1rem;
+}
+
+a, 
+a:hover{
+  text-decoration: none;
+  color: inherit;
+}
+
+.flex {
+  display: flex;
+}
+
+.items-center{
+  align-items: center;
+}
+
+.justify-content {
+  justify-content: center;
+}
+.justify-between {
+  justify-content: space-between;
+}
+
+
+/*===============================================*/
+.modal-wrapper {
+  display: none;
+  position: fixed;
+  inset: 0; /*  top: 0; right:0; left:0 */
+  background-color: rgba(50, 50, 50, 0.8);
+
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+}
+
+.modal-wrapper.active{
+  display: flex;
+}
+
+.modal-wrapper .modal-window{
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 1rem;
+  width: 100%;
+  max-width: 500px;
+  position: relative;
+}
+
+
+.modal-window .close{
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
   font-size: 2rem;
-  padding: 1.5rem;
+  cursor:pointer;
+  line-height: 1;
 }
 
-.color1 {
-  background-color: cadetblue;
-}
-
-.color2 {
-  background-color: rgb(26, 23, 155);
-}
-.color3 {
-  background-color: rgb(26, 105, 17);
-}
-.color4 {
-  background-color: rgb(75, 18, 96);
-}
-.color5 {
-  background-color: rgb(112, 75, 11);
-}
-
-.wrapper {
-  display: grid;
-  grid-template-columns:
-    [start_] 1fr [center-left] 1fr
-    [center-right] 1fr [end_];
-
-  grid-template-rows: [row0] 1fr [row1] 15vh [row2] 1fr [row3];
-}
-
-.wrapper .color4 {
-  grid-area: row1 / start_ / row3 / center-right;
-}
-.wrapper .color5 {
-  grid-area: 2 / 3 / -1 / -1;
+input{
+   margin-bottom: 0.5rem;
 }
